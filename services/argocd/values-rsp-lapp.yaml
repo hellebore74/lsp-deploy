@@ -20,8 +20,8 @@ argo-cd:
     config:
       url: https://rsp.lapp.in2p3.fr/argo-cd
       helm.repositories: |
-        - url: https://lsst-sqre.github.io/charts/
-          name: lsst-sqre
+        - url: https://github.com/hellebore74/charts
+          name: hellebore74
         - url: https://ricoberger.github.io/helm-charts/
           name: ricoberger
         - url: https://kubernetes.github.io/ingress-nginx/
