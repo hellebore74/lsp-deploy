@@ -23,6 +23,10 @@ influxdb:
   enabled: false
 kapacitor:
   enabled: false
+landing_page:
+  enabled: false
+logging:
+  enabled: false
 mobu:
   enabled: false
 moneypenny:
@@ -56,8 +60,9 @@ strimzi_registry_operator:
 tap:
   enabled: true
 tap_schema:
-  enabled: true
+  enabled: false
 vault_secrets_operator:
   enabled: true
 vo_cutouts:
   enabled: false
+
