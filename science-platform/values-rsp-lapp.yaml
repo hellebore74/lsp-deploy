@@ -2,6 +2,8 @@ environment: rsp-lapp
 fqdm: rsp.lapp.in2p3.fr
 vault_path_prefix: secret/k8s_operator/rsp-lapp
 
+alert_stream_broker:
+  enabled: false
 argo:
   enabled: true
 cachemachine:
@@ -12,6 +14,8 @@ cert_manager:
   enabled: true
 chronograf:
   enabled: false
+datalinker:
+  enabled: false
 exposurelog:
   enabled: false
 gafaelfawr:
@@ -20,21 +24,19 @@ influxdb:
   enabled: false
 kapacitor:
   enabled: false
-landing_page:
-  enabled: false
-logging:
-  enabled: false
 mobu:
   enabled: false
 moneypenny:
   enabled: true
 ingress_nginx:
   enabled: true
-nublado:
+noteburst:
   enabled: false
 nublado2:
   enabled: true
 obstap:
+  enabled: false
+plot_navigator:
   enabled: false
 portal:
   enabled: true
@@ -42,11 +44,23 @@ postgres:
   enabled: true
 rancher_external_ip_webhook:
   enabled: false
+semaphore:
+  enabled: false
 squareone:
   enabled: true
 squash_api:
   enabled: false
+strimzi:
+  enabled: false
+strimzi_registry_operator:
+  enabled: false
 tap:
   enabled: true
+tap_schema:
+  enabled: false
 vault_secrets_operator:
   enabled: true
+vo_cutouts:
+  enabled: false
+
+
