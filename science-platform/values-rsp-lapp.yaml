@@ -57,7 +57,7 @@ strimzi_registry_operator:
 tap:
   enabled: true
 tap_schema:
-  enabled: false
+  enabled: true
 vault_secrets_operator:
   enabled: true
 vo_cutouts:
