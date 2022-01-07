@@ -35,3 +35,6 @@ moneypenny:
           path: /data/nfsdir/jhome
 
 
+pull-secret:
+  enabled: true
+  path: "secret/k8s_operator/rsp-lapp/pull-secret"
