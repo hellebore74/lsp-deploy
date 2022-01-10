@@ -1,8 +1,9 @@
 moneypenny:
-  host: "rsp.lapp.in2p3.fr"
+
+  imagePullSecrets:
+    - name: "pull-secret"
 
   ingress:
-    enabled: true
     host: "rsp.lapp.in2p3.fr"
     annotations:
       nginx.ingress.kubernetes.io/auth-url: "https://rsp.lapp.in2p3.fr/auth?scope=admin:provision"
