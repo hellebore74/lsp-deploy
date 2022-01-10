@@ -15,6 +15,7 @@ nublado2:
   config:
     base_url: "https://rsp.lapp.in2p3.fr/"
     butler_secret_path: "secret/k8s_operator/rsp-lapp/butler-secret"
+    pull_secret_path: "secret/k8s_operator/rsp-lapp/pull-secret"
 
     volumes:
       - name: data
@@ -25,12 +26,17 @@ nublado2:
         nfs:
           path: /data/nfsdir/jhome
           server: 134.158.100.202
+#      - name: project
+#          path: /data/nfsdir/project
+#          server: 134.158.100.202
 
     volume_mounts:
       - name: data
         mountPath: /data
       - name: home
         mountPath: /home
+#      - name: project
+#        mountPath: /project
 
   vault_secret_path: "secret/k8s_operator/rsp-lapp/nublado2"
   gafaelfawr_secrets_path: "secret/k8s_operator/rsp-lapp/gafaelfawr"
