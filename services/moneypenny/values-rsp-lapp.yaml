@@ -12,7 +12,7 @@ moneypenny:
     enabled: true
     path: "secret/k8s_operator/rsp-lapp/pull-secret"
 
-  orders: |
+  orders:
     commission:
       - name: initcommission
         image: lsstsqre/inituserhome
