@@ -34,6 +34,8 @@ portal:
   enabled: true
 postgres:
   enabled: true
+production_tools:
+  enabled: true
 semaphore:
   enabled: true
 squareone:

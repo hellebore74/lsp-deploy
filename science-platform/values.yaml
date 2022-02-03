@@ -30,6 +30,8 @@ portal:
   enabled: false
 postgres:
   enabled: false
+production_tools:
+  enabled: false
 semaphore:
   enabled: false
 sherlock:
