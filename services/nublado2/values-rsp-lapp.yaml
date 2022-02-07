@@ -13,7 +13,7 @@ nublado2:
         nginx.ingress.kubernetes.io/auth-signin: "https://rsp.lapp.in2p3.fr/login"
 
   config:
-    base_url: "https://rsp.lapp.in2p3.fr/"
+    base_url: "https://rsp.lapp.in2p3.fr"
     butler_secret_path: "secret/k8s_operator/rsp-lapp/butler-secret"
     pull_secret_path: "secret/k8s_operator/rsp-lapp/pull-secret"
 
@@ -42,6 +42,9 @@ nublado2:
   gafaelfawr_secrets_path: "secret/k8s_operator/rsp-lapp/gafaelfawr"
 
 
+pull-secret:
+  enabled: true
+  path: "secret/k8s_operator/rsp-lapp/pull-secret"
 
 
 
