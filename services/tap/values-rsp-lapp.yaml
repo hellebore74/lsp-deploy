@@ -3,6 +3,7 @@ cadc-tap:
   use_mock_qserv: true
 
   host: "rsp.lapp.in2p3.fr"
+  vaultSecretsPath: "secret/k8s_operator/rsp-lapp/tap"
 
   secrets:
     enabled: false
@@ -11,13 +12,13 @@ cadc-tap:
     enabled: true
     path: 'secret/k8s_operator/rsp-lapp/tap'
 
-  ingress:
-    authenticated_annotations:
-      nginx.ingress.kubernetes.io/auth-response-headers: X-Auth-Request-Uid, X-Auth-Request-Token
-      nginx.ingress.kubernetes.io/auth-url: "https://rsp.lapp.in2p3.fr/auth?scope=read:tap&auth_type=basic&delegate_to=tap"
-      nginx.ingress.kubernetes.io/configuration-snippet: |
-        auth_request_set $auth_token $upstream_http_x_auth_request_token;
-        proxy_set_header Authorization "Bearer $auth_token";
+  #ingress:
+  #  authenticated_annotations:
+  #    nginx.ingress.kubernetes.io/auth-response-headers: X-Auth-Request-Uid, X-Auth-Request-Token
+  #    nginx.ingress.kubernetes.io/auth-url: "https://rsp.lapp.in2p3.fr/auth?scope=read:tap&auth_type=basic&delegate_to=tap"
+  #    nginx.ingress.kubernetes.io/configuration-snippet: |
+  #      auth_request_set $auth_token $upstream_http_x_auth_request_token;
+  #      proxy_set_header Authorization "Bearer $auth_token";
 
 #  gcs_bucket: 'async-results.lsst.codes'
 #  gcs_bucket_url: 'http://async-results.lsst.codes'
