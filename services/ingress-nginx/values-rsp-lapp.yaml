@@ -7,6 +7,9 @@ ingress-nginx:
       proxy-buffer-size: "64k"
       ssl-redirect: "true"
       use-forwarded-headers: "true"
+      proxy-connect-timeout: "180"
+      proxy-read-timeout: "180"
+      proxy-send-timeout: "180"
     service:
       externalTrafficPolicy: Local
       externalIPs:
