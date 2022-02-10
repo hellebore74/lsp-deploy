@@ -34,7 +34,7 @@ portal:
   enabled: false
 postgres:
   enabled: true
-production_tools:
+sasquatch:
   enabled: false
 semaphore:
   enabled: false
