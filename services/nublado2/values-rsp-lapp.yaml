@@ -11,6 +11,7 @@ nublado2:
       hosts: ["rsp.lapp.in2p3.fr"]
       annotations:
         nginx.ingress.kubernetes.io/auth-signin: "https://rsp.lapp.in2p3.fr/login"
+        nginx.ingress.kubernetes.io/auth-url: "https://rsp.lapp.in2p3.fr/auth?scope=exec:notebook&notebook=true"
 
   config:
     base_url: "https://rsp.lapp.in2p3.fr"

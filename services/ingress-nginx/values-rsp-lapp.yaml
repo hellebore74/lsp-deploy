@@ -7,9 +7,9 @@ ingress-nginx:
       proxy-buffer-size: "64k"
       ssl-redirect: "true"
       use-forwarded-headers: "true"
-      proxy-connect-timeout: "60"
-      proxy-read-timeout: "60"
-      proxy-send-timeout: "60"
+#      proxy-connect-timeout: "60"
+#      proxy-read-timeout: "60"
+#      proxy-send-timeout: "60"
     service:
       externalTrafficPolicy: Local
       externalIPs:
@@ -17,37 +17,11 @@ ingress-nginx:
       type: NodePort
     admissionWebhooks:
         enabled: false 
-    readinessProbe:
-      failureThreshold: 3
-      httpGet:
-        path: /healthz
-        port: 10254
-        scheme: HTTP
-      initialDelaySeconds: 30
-      periodSeconds: 30
-      successThreshold: 1
-      timeoutSeconds: 1
-    livenessProbe:
-      failureThreshold: 5
-      httpGet:
-        path: /healthz
-        port: 10254
-        scheme: HTTP
-      initialDelaySeconds: 30
-      periodSeconds: 30
-      successThreshold: 1
-      timeoutSeconds: 1
 
     extraArgs:
       default-ssl-certificate: ingress-nginx/ingress-certificate
     podLabels:
       hub.jupyter.org/network-access-proxy-http: "true"
-
-  ingress:
-    annotations:
-      nginx.ingress.kubernetes.io/proxy-connect-timeout: "180"
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "180"
-      nginx.ingress.kubernetes.io/proxy-send-timeout: "180"
 
 vault_certificate:
   enabled: true
