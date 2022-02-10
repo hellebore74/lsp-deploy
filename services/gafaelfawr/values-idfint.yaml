@@ -5,6 +5,10 @@ gafaelfawr:
     host: "data-int.lsst.cloud"
   vaultSecretsPath: "secret/k8s_operator/data-int.lsst.cloud/gafaelfawr"
 
+  # Enable the frontend NetworkPolicy.
+  networkPolicy:
+    enabled: true
+
   # Use the CSI storage class so that we can use snapshots.
   redis:
     persistence:
@@ -30,9 +34,6 @@ gafaelfawr:
         - "lsst-sqre-friends"
       "exec:portal":
         - "lsst-ops-panda"
-        - "lsst-sqre-square"
-        - "lsst-sqre-friends"
-      "read:alertdb":
         - "lsst-sqre-square"
         - "lsst-sqre-friends"
       "read:image":

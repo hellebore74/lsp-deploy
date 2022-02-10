@@ -1,8 +1,4 @@
 argo-cd:
-  controller:
-    args:
-      repoServerTimeoutSeconds: "180"
-
   redis:
     enabled: true
 

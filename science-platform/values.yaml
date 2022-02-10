@@ -1,10 +1,14 @@
 alert_stream_broker:
   enabled: false
+argo:
+  enabled: false
 cachemachine:
   enabled: false
 cert_issuer:
   enabled: false
 cert_manager:
+  enabled: false
+chronograf:
   enabled: false
 datalinker:
   enabled: false
@@ -12,7 +16,11 @@ exposurelog:
   enabled: false
 gafaelfawr:
   enabled: false
+influxdb:
+  enabled: false
 ingress_nginx:
+  enabled: false
+kapacitor:
   enabled: false
 mobu:
   enabled: false
@@ -30,11 +38,9 @@ portal:
   enabled: false
 postgres:
   enabled: false
-sasquatch:
+rancher_external_ip_webhook:
   enabled: false
 semaphore:
-  enabled: false
-sherlock:
   enabled: false
 squareone:
   enabled: false

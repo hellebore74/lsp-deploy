@@ -12,4 +12,3 @@ vault-secrets-operator:
           key: VAULT_TOKEN_LEASE_DURATION
   vault:
     address: "https://vault.lsst.codes"
-    reconciliationTime: 60

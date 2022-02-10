@@ -4,18 +4,26 @@ vault_path_prefix: secret/k8s_operator/data-dev.lsst.cloud
 
 alert_stream_broker:
   enabled: false
+argo:
+  enabled: true
 cachemachine:
   enabled: true
 cert_issuer:
   enabled: true
 cert_manager:
   enabled: true
+chronograf:
+  enabled: false
 datalinker:
   enabled: true
 exposurelog:
   enabled: false
 gafaelfawr:
   enabled: true
+influxdb:
+  enabled: false
+kapacitor:
+  enabled: false
 mobu:
   enabled: true
 moneypenny:
@@ -34,11 +42,9 @@ portal:
   enabled: true
 postgres:
   enabled: true
-sasquatch:
+rancher_external_ip_webhook:
   enabled: true
 semaphore:
-  enabled: true
-sherlock:
   enabled: true
 squareone:
   enabled: true
