@@ -16,7 +16,11 @@ ingress-nginx:
         - 134.158.100.201
       type: NodePort
     admissionWebhooks:
-        enabled: false 
+        enabled: false
+    podLabels:
+      gafaelfawr.lsst.io/ingress: "true"
+      hub.jupyter.org/network-access-proxy-http: "true"
+
 
     extraArgs:
       default-ssl-certificate: ingress-nginx/ingress-certificate
