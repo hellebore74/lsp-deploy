@@ -27,7 +27,11 @@ cachemachine:
           {
             "type": "RubinRepoMan",
             "registry_url": "registry.hub.docker.com",
-            "repo": "hellebore74/jupyterlab"
+            "repo": "hellebore74/jupyterlab",
+            "recommended_tag": "recommended",
+            "num_releases": 1,
+            "num_weeklies": 2,
+            "num_dailies": 3	    
           }
         ]
       }
