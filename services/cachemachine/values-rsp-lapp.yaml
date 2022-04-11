@@ -23,7 +23,7 @@ cachemachine:
             "num_releases": 1,
             "num_weeklies": 2,
             "num_dailies": 3
-          }
+          },
           {
             "type": "RubinRepoMan",
             "registry_url": "registry.hub.docker.com",
@@ -37,4 +37,4 @@ cachemachine:
       }
 
 
-
+#            "registry_url": "registry.hub.docker.com",
