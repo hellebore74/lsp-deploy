@@ -1,22 +1,14 @@
-postgres:
-  pull_secret: 'pull-secret'
-  vault_secrets:
-    path: 'secret/k8s_operator/rsp-lapp/postgres'
-  debug: 'true'
-  jupyterhub_db:
-    user: 'jovyan'
-    db: 'jupyterhub'
-  gafaelfawr_db:
-    user: 'gafaelfawr'
-    db: 'gafaelfawr'
-  image:
-    tag: '0.0.5'
-  postgres_storage_class: 'rsp-local-storage'
-  volume_name: 'postgres-data-rsp-lapp'
 
-  postgresStorageClass: "manual"
+debug: 'true'
+jupyterhub_db:
+  user: 'jovyan'
+  db: 'jupyterhub'
+gafaelfawr_db:
+  user: 'gafaelfawr'
+  db: 'gafaelfawr'
+image:
+  tag: '0.0.5'
 
-pull-secret:
-  enabled: true
-  path: secret/k8s_operator/rsp-lapp/pull-secret
+postgresStorageClass: "manual"
+volumeName: 'postgres-data-rsp-lapp'
 
