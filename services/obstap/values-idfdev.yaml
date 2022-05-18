@@ -1,18 +1,3 @@
-cadc-tap-postgres:
-  pull_secret: 'pull-secret'
-  tag: "1.1"
-  host: "data-dev.lsst.cloud"
-
-  secrets:
-    enabled: false
-
-  vault_secrets:
-    enabled: true
-    path: 'secret/k8s_operator/data-dev.lsst.cloud/tap'
-
-  gcs_bucket: 'async-results.lsst.codes'
-  gcs_bucket_url: 'http://async-results.lsst.codes'
-
-pull-secret:
-  enabled: true
-  path: secret/k8s_operator/data-dev.lsst.cloud/pull-secret
+config:
+  gcsBucket: "async-results.lsst.codes"
+  gcsBucketUrl: "http://async-results.lsst.codes"

@@ -28,10 +28,13 @@ argo-cd:
           name: ingress-nginx
         - url: https://charts.helm.sh/stable
           name: stable
-
+      vaultSecretsPath: secret/k8s_operator/rsp-lapp
+    
     rbacConfig:
       policy.csv: |
         g, lsst-france:calcul, role:admin
+
+
 
   configs:
     secret:
@@ -45,5 +48,7 @@ pull-secret:
   enabled: true
   path: secret/k8s_operator/rsp-lapp/pull-secret
 
+global:
+  vaultSecretsPath: secret/k8s_operator/rsp-lapp
 
 

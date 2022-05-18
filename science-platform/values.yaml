@@ -2,8 +2,6 @@ alert_stream_broker:
   enabled: false
 cachemachine:
   enabled: false
-cert_issuer:
-  enabled: false
 cert_manager:
   enabled: false
 datalinker:
@@ -18,6 +16,8 @@ mobu:
   enabled: false
 moneypenny:
   enabled: false
+narrativelog:
+  enabled: false
 noteburst:
   enabled: false
 nublado2:
@@ -29,6 +29,10 @@ plot_navigator:
 portal:
   enabled: false
 postgres:
+  enabled: false
+sasquatch:
+  enabled: false
+production_tools:
   enabled: false
 semaphore:
   enabled: false
@@ -45,6 +49,12 @@ strimzi_registry_operator:
 tap:
   enabled: false
 tap_schema:
+  enabled: false
+telegraf:
+  enabled: false
+telegraf-ds:
+  enabled: false
+times_square:
   enabled: false
 vault_secrets_operator:
   enabled: false

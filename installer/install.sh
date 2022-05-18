@@ -34,6 +34,7 @@ echo "Update / install vault-secrets-operator..."
 helm dependency update ../services/vault-secrets-operator
 helm upgrade vault-secrets-operator ../services/vault-secrets-operator \
   --install \
+  --values ../services/vault-secrets-operator/values.yaml \
   --values ../services/vault-secrets-operator/values-$ENVIRONMENT.yaml \
   --create-namespace \
   --namespace vault-secrets-operator \
@@ -93,14 +94,6 @@ then
     --port-forward \
     --port-forward-namespace argocd && \
     kubectl -n cert-manager rollout status deploy/cert-manager-webhook
-fi
-
-if [ $(yq -r .cert_issuer.enabled ../science-platform/values-$ENVIRONMENT.yaml) == "true" ];
-then
-  echo "Syncing cert-issuer..."
-  argocd app sync cert-issuer \
-    --port-forward \
-    --port-forward-namespace argocd
 fi
 
 if [ $(yq -r .postgres.enabled ../science-platform/values-$ENVIRONMENT.yaml) == "true" ];
