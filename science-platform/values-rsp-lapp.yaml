@@ -1,5 +1,5 @@
 environment: rsp-lapp
-fqdm: rsp.lapp.in2p3.fr
+fqdn: rsp.lapp.in2p3.fr
 vault_path_prefix: secret/k8s_operator/rsp-lapp
 
 alert_stream_broker:

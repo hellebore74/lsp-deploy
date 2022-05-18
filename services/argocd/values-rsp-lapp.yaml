@@ -5,7 +5,6 @@ argo-cd:
   server:
     ingress:
       enabled: true
-      host: "rsp.lapp.in2p3.fr"	
       hosts:
         - "rsp.lapp.in2p3.fr"
       annotations:
@@ -52,5 +51,4 @@ pull-secret:
 
 global:
   vaultSecretsPath: secret/k8s_operator/rsp-lapp
-  host: "rsp.lapp.in2p3.fr"
 
