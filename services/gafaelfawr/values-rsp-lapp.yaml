@@ -1,46 +1,46 @@
-gafaelfawr:
-  imagePullSecrets:
-    - name: "pull-secret"
-  ingress:
-    host: rsp.lapp.in2p3.fr
-  vaultSecretsPath: "secret/k8s_operator/rsp-lapp/gafaelfawr"
 
-  # Reset token storage on every Redis restart.
-  redis:
-    persistence:
-      enabled: false
+imagePullSecrets:
+  - name: "pull-secret"
+ingress:
+  host: rsp.lapp.in2p3.fr
+vaultSecretsPath: "secret/k8s_operator/rsp-lapp/gafaelfawr"
 
-  config:
-    host: "rsp.lapp.in2p3.fr"
-    databaseUrl: "postgresql://gafaelfawr@postgres.postgres/gafaelfawr"
+# Reset token storage on every Redis restart.
+redis:
+  persistence:
+    enabled: false
 
-    github:
-      clientId: "bf216316caab0dfa2127"
+config:
+  host: "rsp.lapp.in2p3.fr"
+  databaseUrl: "postgresql://gafaelfawr@postgres.postgres/gafaelfawr"
 
-    # Allow access by GitHub team.
-    groupMapping:
-      "exec:admin":
-        - "lsst-france-calcul"
-      "exec:user":
-        - "lsst-france-calcul"
-      "read:workspace":
-        - "lsst-france-calcul"
-      "read:workspace/user":
-        - "lsst-france-calcul"
-      "write:workspace/user":
-        - "lsst-france-calcul"
-      "exec:portal":
-        - "lsst-france-calcul"
-      "exec:notebook":
-        - "lsst-france-calcul"
-      "read:tap":
-        - "lsst-france-calcul"
-      "read:image":
-        - "lsst-france-calcul"
+  github:
+    clientId: "bf216316caab0dfa2127"
 
-    initialAdmins:
-       - "hellebore74"
-       - "boutigny"
+  # Allow access by GitHub team.
+  groupMapping:
+    "exec:admin":
+      - "lsst-france-calcul"
+    "exec:user":
+      - "lsst-france-calcul"
+    "read:workspace":
+      - "lsst-france-calcul"
+    "read:workspace/user":
+      - "lsst-france-calcul"
+    "write:workspace/user":
+      - "lsst-france-calcul"
+    "exec:portal":
+      - "lsst-france-calcul"
+    "exec:notebook":
+      - "lsst-france-calcul"
+    "read:tap":
+      - "lsst-france-calcul"
+    "read:image":
+      - "lsst-france-calcul"
+
+  initialAdmins:
+     - "hellebore74"
+     - "boutigny"
 
   # Use CILogon authentication.
   #cilogon:
@@ -49,8 +49,6 @@ gafaelfawr:
   # login_params:
   #    skin: "LSST"
 
-pull-secret:
-  enabled: true
-  path: secret/k8s_operator/rsp-lapp/pull-secret
+
 
 

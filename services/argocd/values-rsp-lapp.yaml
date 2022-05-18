@@ -5,6 +5,7 @@ argo-cd:
   server:
     ingress:
       enabled: true
+      host: "rsp.lapp.in2p3.fr"	
       hosts:
         - "rsp.lapp.in2p3.fr"
       annotations:
