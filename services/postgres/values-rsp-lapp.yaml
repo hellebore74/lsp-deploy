@@ -14,6 +14,8 @@ postgres:
   postgres_storage_class: 'rsp-local-storage'
   volume_name: 'postgres-data-rsp-lapp'
 
+  postgresStorageClass: "manual"
+
 pull-secret:
   enabled: true
   path: secret/k8s_operator/rsp-lapp/pull-secret
