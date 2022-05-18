@@ -50,5 +50,5 @@ pull-secret:
 
 global:
   vaultSecretsPath: secret/k8s_operator/rsp-lapp
-
+  host: "rsp.lapp.in2p3.fr"
 
