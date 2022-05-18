@@ -32,3 +32,6 @@ pull-secret:
   enabled: true
   path: secret/k8s_operator/rsp-lapp/pull-secret
 
+global:
+  host: "rsp.lapp.in2p3.fr"
+
