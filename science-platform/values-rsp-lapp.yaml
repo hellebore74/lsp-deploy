@@ -4,32 +4,24 @@ vault_path_prefix: secret/k8s_operator/rsp-lapp
 
 alert_stream_broker:
   enabled: false
-argo:
-  enabled: true
 cachemachine:
   enabled: true
-cert_issuer:
-  enabled: false
 cert_manager:
   enabled: true
-chronograf:
-  enabled: false
 datalinker:
   enabled: false
 exposurelog:
   enabled: false
 gafaelfawr:
   enabled: true
-influxdb:
-  enabled: false
-kapacitor:
-  enabled: false
 mobu:
   enabled: false
 moneypenny:
   enabled: true
 ingress_nginx:
   enabled: true
+narrativelog:
+  enabled: false
 noteburst:
   enabled: false
 nublado2:
@@ -42,10 +34,14 @@ portal:
   enabled: true
 postgres:
   enabled: true
-rancher_external_ip_webhook:
-  enabled: false
+sasquatch:
+  enable: false
+production_tools:
+  enable: false
 semaphore:
   enabled: false
+sherlock:
+  enable: false
 squareone:
   enabled: true
 squash_api:
