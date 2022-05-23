@@ -1,5 +1,5 @@
 ingress:
-  tls: true
+  tls: false
   annotations:
     cert-manager.io/cluster-issuer: cert-issuer-letsencrypt-dns
 
