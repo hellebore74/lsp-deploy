@@ -1,5 +1,8 @@
 ingress:
   tls: true
+  annotations:
+    cert-manager.io/cluster-issuer: cert-issuer-letsencrypt-dns
+
   
 config:
   siteName: "Rubin Science Platform @ lapp in2p3"
