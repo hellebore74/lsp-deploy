@@ -1,32 +1,26 @@
 
-cachemachine:
-  imagePullSecrets:
-    - name: "cachemachine-secret"
+imagePullSecrets:
+  - name: "cachemachine-secret"
 
-  ingress:
-    enabled: true
-    host: "rsp.lapp.in2p3.fr"
+ingress:
+  enabled: true
+  host: "rsp.lapp.in2p3.fr"
 
-  vaultSecretsPath: "secret/k8s_operator/rsp-lapp/pull-secret"
+autostart:
+  jupyter: |
+    {
+      "name": "jupyter",
+      "labels": {},
+      "repomen": [
+        {
+          "type": "RubinRepoMan",
+          "registry_url": "registry.hub.docker.com",
+          "repo": "hellebore74/jupyterlab",
+          "recommended_tag": "recommended",
+          "num_releases": 1,
+          "num_weeklies": 2,
+          "num_dailies": 3	    
+        }
+      ]
+    }
 
-  autostart:
-    jupyter: |
-      {
-        "name": "jupyter",
-        "labels": {},
-        "repomen": [
-          {
-            "type": "RubinRepoMan",
-            "registry_url": "registry.hub.docker.com",
-            "repo": "hellebore74/jupyterlab",
-            "recommended_tag": "recommended",
-            "num_releases": 1,
-            "num_weeklies": 2,
-            "num_dailies": 3	    
-          }
-        ]
-      }
-
-
-
-#            "registry_url": "registry.hub.docker.com",
