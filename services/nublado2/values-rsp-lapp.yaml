@@ -2,10 +2,6 @@ jupyterhub:
   debug:
     enabled: true
 
-  singleuser:
-    storage:
-      type: none
- 
   ingress:
     hosts: ["rsp.lapp.in2p3.fr"]
     annotations:
