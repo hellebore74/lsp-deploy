@@ -1,5 +1,5 @@
 ingress:
-  tls:false
+  tls: false
   
 config:
   siteName: "Rubin Science Platform @ lapp in2p3"
