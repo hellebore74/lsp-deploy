@@ -419,13 +419,6 @@ config:
           #url_prefix = /idds
           #cacher_dir = /tmp
           cacher_dir = /data/idds
-#    - apiVersion: v1
-#      kind: ServiceAccount
-#      metadata:
-#        name: "{{ user }}-serviceaccount"
-#        namespace: "{{ user_namespace }}"
-#      imagePullSecrets:
-#      - name: pull-secret
     - apiVersion: rbac.authorization.k8s.io/v1
       kind: Role
       metadata:
