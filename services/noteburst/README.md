@@ -12,7 +12,7 @@ Noteburst is a notebook execution service for the Rubin Science Platform.
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | redis | 16.9.5 |
+| https://charts.bitnami.com/bitnami | redis | 16.9.10 |
 
 ## Values
 
@@ -25,6 +25,7 @@ Noteburst is a notebook execution service for the Rubin Science Platform.
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | config.logLevel | string | `"INFO"` | Logging level: "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL" |
 | config.worker.identities | list | `[]` | Science Platform user identities that workers can acquire. Each item is an object with username and uuid keys |
+| config.worker.jobTimeout | int | `300` | The default notebook execution timeout, in seconds. |
 | config.worker.workerCount | int | `1` | Number of workers to run |
 | fullnameOverride | string | `""` | Override the full name for resources (includes the release name) |
 | global.baseUrl | string | Set by Argo CD | Base URL for the environment |
