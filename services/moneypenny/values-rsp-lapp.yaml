@@ -15,8 +15,8 @@ orders:
         runAsUser: 0
         runAsNonRootUser: false
       volumeMounts:
-        - mountPath: /homedirs
-          name: homedirs
+      - mountPath: /homedirs
+        name: homedirs
   volumes:
     - name: homedirs
       nfs:
