@@ -28,10 +28,10 @@ vault_certificate:
   enabled: true
   path: secret/k8s_operator/rsp-lapp/ingress-nginx
 
-pull-secret:
-  enabled: true
-  path: secret/k8s_operator/rsp-lapp/pull-secret
+#pull-secret:
+#  enabled: true
+#  path: secret/k8s_operator/rsp-lapp/pull-secret
 
-global:
-  host: "rsp.lapp.in2p3.fr"
+#global:
+#  host: "rsp.lapp.in2p3.fr"
 
