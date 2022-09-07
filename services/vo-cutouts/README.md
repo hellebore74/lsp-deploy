@@ -2,7 +2,9 @@
 
 Image cutout service complying with IVOA SODA
 
-**Homepage:** <https://github.com/lsst-sqre/vo-cutouts>
+## Source Code
+
+* <https://github.com/lsst-sqre/vo-cutouts>
 
 ## Values
 
@@ -12,7 +14,7 @@ Image cutout service complying with IVOA SODA
 | cloudsql.enabled | bool | `false` | Enable the Cloud SQL Auth Proxy sidecar, used with CloudSQL databases on Google Cloud |
 | cloudsql.image.pullPolicy | string | `"IfNotPresent"` | Pull policy for Cloud SQL Auth Proxy images |
 | cloudsql.image.repository | string | `"gcr.io/cloudsql-docker/gce-proxy"` | Cloud SQL Auth Proxy image to use |
-| cloudsql.image.tag | string | `"1.30.1"` | Cloud SQL Auth Proxy tag to use |
+| cloudsql.image.tag | string | `"1.31.2"` | Cloud SQL Auth Proxy tag to use |
 | cloudsql.instanceConnectionName | string | `""` | Instance connection name for a CloudSQL PostgreSQL instance |
 | cloudsql.serviceAccount | string | None, must be set | The Google service account that has an IAM binding to the `vo-cutouts` Kubernetes service accounts and has the `cloudsql.client` role, access to the GCS bucket, and ability to sign URLs as itself |
 | config.databaseUrl | string | None, must be set | URL for the PostgreSQL database |
@@ -23,7 +25,7 @@ Image cutout service complying with IVOA SODA
 | config.timeout | int | 600 (10 minutes) | Timeout for a single cutout job in seconds |
 | cutoutWorker.affinity | object | `{}` | Affinity rules for the cutout worker pod |
 | cutoutWorker.image.pullPolicy | string | `"IfNotPresent"` | Pull policy for cutout workers |
-| cutoutWorker.image.repository | string | `"lsstsqre/vo-cutouts-worker"` | Stack image to use for cutouts |
+| cutoutWorker.image.repository | string | `"ghcr.io/lsst-sqre/vo-cutouts-worker"` | Stack image to use for cutouts |
 | cutoutWorker.image.tag | string | The appVersion of the chart | Tag of vo-cutouts worker image to use |
 | cutoutWorker.nodeSelector | object | `{}` | Node selection rules for the cutout worker pod |
 | cutoutWorker.podAnnotations | object | `{}` | Annotations for the cutout worker pod |
@@ -42,7 +44,7 @@ Image cutout service complying with IVOA SODA
 | global.host | string | Set by Argo CD | Host name for ingress |
 | global.vaultSecretsPath | string | Set by Argo CD | Base path for Vault secrets |
 | image.pullPolicy | string | `"IfNotPresent"` | Pull policy for the vo-cutouts image |
-| image.repository | string | `"lsstsqre/vo-cutouts"` | vo-cutouts image to use |
+| image.repository | string | `"ghcr.io/lsst-sqre/vo-cutouts"` | vo-cutouts image to use |
 | image.tag | string | The appVersion of the chart | Tag of vo-cutouts image to use |
 | ingress.annotations | object | `{}` | Additional annotations to add to the ingress |
 | ingress.gafaelfawrAuthQuery | string | `"scope=read:image"` | Gafaelfawr auth query string |
@@ -52,7 +54,7 @@ Image cutout service complying with IVOA SODA
 | redis.affinity | object | `{}` | Affinity rules for the Redis pod |
 | redis.image.pullPolicy | string | `"IfNotPresent"` | Pull policy for the Redis image |
 | redis.image.repository | string | `"redis"` | Redis image to use |
-| redis.image.tag | string | `"6.2.7"` | Redis image tag to use |
+| redis.image.tag | string | `"7.0.4"` | Redis image tag to use |
 | redis.nodeSelector | object | `{}` | Node selection rules for the Redis pod |
 | redis.persistence.accessMode | string | `"ReadWriteOnce"` | Access mode of storage to request |
 | redis.persistence.enabled | bool | `true` | Whether to persist Redis storage and thus tokens. Setting this to false will use `emptyDir` and reset all tokens on every restart. Only use this for a test deployment. |

@@ -16,7 +16,7 @@ exposurelog:
 gafaelfawr:
   enabled: true
 hips:
-  enabled: false
+  enabled: true
 ingress_nginx:
   enabled: true
 mobu:
@@ -28,8 +28,6 @@ narrativelog:
 noteburst:
   enabled: false
 nublado2:
-  enabled: true
-obstap:
   enabled: true
 plot_navigator:
   enabled: false

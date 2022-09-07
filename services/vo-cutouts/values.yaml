@@ -11,7 +11,7 @@ fullnameOverride: ""
 
 image:
   # -- vo-cutouts image to use
-  repository: "lsstsqre/vo-cutouts"
+  repository: "ghcr.io/lsst-sqre/vo-cutouts"
 
   # -- Pull policy for the vo-cutouts image
   pullPolicy: "IfNotPresent"
@@ -78,7 +78,7 @@ cloudsql:
     repository: "gcr.io/cloudsql-docker/gce-proxy"
 
     # -- Cloud SQL Auth Proxy tag to use
-    tag: "1.30.1"
+    tag: "1.31.2"
 
     # -- Pull policy for Cloud SQL Auth Proxy images
     pullPolicy: "IfNotPresent"
@@ -98,7 +98,7 @@ cutoutWorker:
 
   image:
     # -- Stack image to use for cutouts
-    repository: "lsstsqre/vo-cutouts-worker"
+    repository: "ghcr.io/lsst-sqre/vo-cutouts-worker"
 
     # -- Tag of vo-cutouts worker image to use
     # @default -- The appVersion of the chart
@@ -147,7 +147,7 @@ redis:
     repository: "redis"
 
     # -- Redis image tag to use
-    tag: "6.2.7"
+    tag: "7.0.4"
 
     # -- Pull policy for the Redis image
     pullPolicy: "IfNotPresent"

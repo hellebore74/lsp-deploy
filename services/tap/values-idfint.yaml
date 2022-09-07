@@ -6,9 +6,12 @@ resources:
     cpu: 8.0
     memory: "32G"
 
+replicaCount: 2
+
 config:
   gcsBucket: "async-results.lsst.codes"
   gcsBucketUrl: "http://async-results.lsst.codes"
+  jvmMaxHeapSize: "31G"
 
 qserv:
   host: "10.136.1.211:4040"

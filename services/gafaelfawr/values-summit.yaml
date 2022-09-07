@@ -2,14 +2,17 @@
 # use persistent volumes once we can coordinate that.
 redis:
   persistence:
-    enabled: false
+    storageClass: "rook-ceph-block"
 
 config:
   databaseUrl: "postgresql://gafaelfawr@postgres.postgres/gafaelfawr"
 
-  # Use GitHub authentication.
   github:
     clientId: "220d64cbf46f9d2b7873"
+
+  # Support OpenID Connect clients like Chronograf.
+  oidcServer:
+    enabled: true
 
   # Allow access by GitHub team.
   groupMapping:
@@ -23,6 +26,11 @@ config:
       - "lsst-ts-summit-access"
       - "rubin-summit-rsp-access"
     "exec:portal":
+      - "lsst-sqre-square"
+      - "lsst-sqre-friends"
+      - "lsst-ts-summit-access"
+      - "rubin-summit-rsp-access"
+    "read:image":
       - "lsst-sqre-square"
       - "lsst-sqre-friends"
       - "lsst-ts-summit-access"
