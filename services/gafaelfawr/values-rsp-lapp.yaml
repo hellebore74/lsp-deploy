@@ -13,6 +13,10 @@ redis:
 config:
   host: "rsp.lapp.in2p3.fr"
   databaseUrl: "postgresql://gafaelfawr@postgres.postgres/gafaelfawr"
+  
+  loglevel: "DEBUG"
+  issuer:
+    exp_minutes: 43200  # 30 days
 
   github:
     clientId: "bf216316caab0dfa2127"
@@ -41,14 +45,6 @@ config:
   initialAdmins:
      - "hellebore74"
      - "boutigny"
-
-  # Use CILogon authentication.
-  #cilogon:
-  #  client_id: "cilogon:/client_id/74e865cd71a3a327096d36081166b739"
-  #  redirect_url: "https://rsp.lapp.in2p3.fr/login"
-  # login_params:
-  #    skin: "LSST"
-
 
 pull-secret:
   enabled: true
