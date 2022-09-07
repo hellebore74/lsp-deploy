@@ -35,13 +35,13 @@ portal:
 postgres:
   enabled: true
 sasquatch:
-  enable: false
+  enabled: false
 production_tools:
-  enable: false
+  enabled: false
 semaphore:
   enabled: false
 sherlock:
-  enable: false
+  enabled: false
 squareone:
   enabled: true
 squash_api:
