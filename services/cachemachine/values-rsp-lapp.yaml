@@ -14,21 +14,12 @@ autostart:
       "repomen": [
         {
           "type": "RubinRepoMan",
-          "registry_url": "registry.hub.docker.com",
-          "repo": "lsstsqre/sciplat-lab",
+          "registry_url": "docker.io",
+          "repo": "hellebore74/jupyterlab",
           "recommended_tag": "recommended",
           "num_releases": 1,
           "num_weeklies": 2,
           "num_dailies": 3	    
-        },
-        {
-          "type": "SimpleRepoMan",
-          "images": [
-            {
-              "image_url": "docker.io/hellebore74/jupyterlab:w_2022_01_cta_v0.2",
-              "name": "Test_CTA"
-            }
-          ]
         }
       ]
     }
