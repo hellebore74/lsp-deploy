@@ -20,6 +20,15 @@ autostart:
           "num_releases": 1,
           "num_weeklies": 2,
           "num_dailies": 3	    
+        },
+        {
+          "type": "SimpleRepoMan",
+          "images": [
+            {
+              "image_url": "docker.io/hellebore74/jupyterlab:w_2022_01_cta_v0.2",
+              "name": "Test_CTA"
+            }
+          ]
         }
       ]
     }
