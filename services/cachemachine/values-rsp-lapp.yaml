@@ -22,7 +22,7 @@ autostart:
           "num_dailies": 3	    
         },
         {
-	  "type": "SimpleRepoMan",
+          "type": "SimpleRepoMan",
           "images": [
             {
               "image_url": "hub.docker.com/repository/docker/hellebore74/jupyterlab:w_2022_01_cta_v0.2",
