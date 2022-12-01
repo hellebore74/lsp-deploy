@@ -56,15 +56,74 @@ influxdb:
       enabled: false
     logging:
       level: "debug"
-  # -- InfluxDB Custom initialization scripts.
   initScripts:
+    # -- Enable InfluxDB custom initialization script.
+    enabled: false
+    # scripts:
+    # # -- InfluxDB custom initialization script.
+    #   init.iql: |+
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 1
+    limits:
+      memory: 96Gi
+      cpu: 8
+
+influxdb2:
+  enabled: false
+  adminUser:
+    # -- Admin default organization.
+    organization: "default"
+    # -- Admin default bucket.
+    bucket: "default"
+    # -- Get admin-password/admin-token keys from secret.
+    existingSecret: sasquatch
+  persistence:
+    # -- Enable persistent volume claim.
+    # By default storageClass is undefined choosing the default provisioner (standard on GKE).
+    enabled: true
+    # -- Persistent volume size.
+    # @default 1Ti for teststand deployments.
+    size: 1Ti
+  ingress:
+    # -- InfluxDB2 ingress configuration
+    enabled: false
+    hostname: ""
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /api/v2/$2
+    className: "nginx"
+    path: /influxdb2(/|$)(.*)
+  env:
+    - name: INFLUXD_STORAGE_WAL_FSYNC_DELAY
+      value: "100ms"
+    - name: INFLUXD_HTTP_IDLE_TIMEOUT
+      value: "0"
+    - name: INFLUXD_FLUX_LOG_ENABLED
+      value: "true"
+    - name: INFLUXD_LOG_LEVEL
+      value: "debug"
+  initScripts:
+    # -- InfluxDB2 initialization scripts
     enabled: true
     scripts:
-      init.iql: |+
-        CREATE DATABASE "telegraf" WITH DURATION 30d REPLICATION 1 NAME "rp_30d"
+      init.sh: |+
+        #!/bin/bash
+        influx bucket create --name telegra-kafka-consumer --org default
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 1
+    limits:
+      memory: 96Gi
+      cpu: 8
 
-# -- Override strimzi-kafka configuration.
+# -- Override kafka-connect-manager configuration.
 kafka-connect-manager: {}
+
+# -- Override telegraf-kafka-consumer
+telegraf-kafka-consumer: {}
+
 
 chronograf:
   # -- Chronograf image tag.
@@ -90,6 +149,13 @@ chronograf:
     CUSTOM_AUTO_REFRESH: "1s=1000"
   # -- Chronograf secrets, expected keys generic_client_id, generic_client_secret and token_secret.
   envFromSecret: "sasquatch"
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 1
+    limits:
+      memory: 16Gi
+      cpu: 4
 
 kapacitor:
   # -- Kapacitor image tag.
@@ -115,42 +181,23 @@ kapacitor:
       memory: 16Gi
       cpu: 4
 
-telegraf:
-  # -- Allow network access to JupyterHub pod.
-  podLabels:
-    hub.jupyter.org/network-access-hub: "true"
-  env:
-    # -- Telegraf password.
-    - name: TELEGRAF_PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: sasquatch
-          key: telegraf-password
-  service:
-    # -- Telegraf service.
-    enabled: false
-  config:
-    # -- Telegraf processor plugins.
-    processors: {}
-    # -- Telegraf input plugins.
-    # Collect JupyterHub Prometheus metrics by dedault.
-    # See https://jupyterhub.readthedocs.io/en/stable/reference/metrics.html
-    inputs:
-      - prometheus:
-          urls:
-            - http://hub.nublado2:8081/nb/hub/metrics
-          # See https://docs.influxdata.com/influxdb/v2.1/reference/prometheus-metrics/
-          metric_version: 2
-    # -- Telegraf default output destination.
-    outputs:
-      - influxdb:
-          urls:
-            - "http://sasquatch-influxdb.sasquatch:8086"
-          database: "telegraf"
-          username: "telegraf"
-          password: "$TELEGRAF_PASSWORD"
+bucketmapper:
+  # -- image for monitoring-related cronjobs
+  image:
+    # -- repository for rubin-influx-tools
+    repository: ghcr.io/lsst-sqre/rubin-influx-tools
+    # -- tag for rubin-influx-tools
+    tag: 0.1.23
 
 global:
+   # -- Base URL for the environment
+  # @default -- Set by Argo CD
+  baseUrl: ""
+
+  # -- Host name for ingress
+  # @default -- Set by Argo CD
+  host: ""
+
   # -- Base path for Vault secrets
   # @default -- Set by Argo CD
   vaultSecretsPath: ""

@@ -1,10 +1,8 @@
 # vault-secrets-operator
 
-## Requirements
+## Source Code
 
-| Repository | Name | Version |
-|------------|------|---------|
-| https://ricoberger.github.io/helm-charts/ | vault-secrets-operator | 1.19.2 |
+* <https://github.com/ricoberger/vault-secrets-operator>
 
 ## Values
 

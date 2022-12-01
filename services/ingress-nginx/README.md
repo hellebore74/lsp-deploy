@@ -1,10 +1,12 @@
 # ingress-nginx
 
-## Requirements
+Ingress controller
 
-| Repository | Name | Version |
-|------------|------|---------|
-| https://kubernetes.github.io/ingress-nginx | ingress-nginx | 4.2.3 |
+**Homepage:** <https://kubernetes.github.io/ingress-nginx/>
+
+## Source Code
+
+* <https://github.com/kubernetes/ingress-nginx>
 
 ## Values
 

@@ -25,6 +25,8 @@ config:
     LSST_DDS_INTERFACE: net1
     LSST_DDS_PARTITION_PREFIX: summit
     LSST_SITE: summit
+    PGPASSFILE: "/opt/lsst/software/jupyterlab/butler-secret/postgres-credentials.txt"
+    PGUSER: "oods"
   volumes:
     - name: home
       nfs:
@@ -97,9 +99,3 @@ config:
     - name: base-comcam
       mountPath: /data/lsstdata/base/comcam
       readOnly: true
-
-vault_secret_path: "secret/k8s_operator/summit-lsp.lsst.codes/nublado2"
-
-pull-secret:
-  enabled: true
-  path: "secret/k8s_operator/summit-lsp.lsst.codes/pull-secret"
