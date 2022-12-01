@@ -2,9 +2,7 @@
 
 The TAP_SCHEMA database
 
-## Source Code
-
-* <https://github.com/lsst/sdm_schemas>
+**Homepage:** <https://github.com/lsst/sdm_schemas>
 
 ## Values
 

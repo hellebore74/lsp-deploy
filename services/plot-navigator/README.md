@@ -1,10 +1,6 @@
 # plot-navigator
 
-Panel-based plot viewer
-
-## Source Code
-
-* <https://github.com/lsst-dm/pipetask-plot-navigator>
+Panel-based plot viewer.
 
 ## Values
 

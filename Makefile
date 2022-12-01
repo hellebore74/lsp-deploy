@@ -5,12 +5,5 @@ help:
 
 .PHONY:
 init:
-	pip install --upgrade pre-commit tox
+	pip install --upgrade pre-commit
 	pre-commit install
-	pip install -e ".[dev]"
-	rm -rf .tox
-
-.PHONY:
-clean:
-	rm -rf .tox
-	make -C docs clean

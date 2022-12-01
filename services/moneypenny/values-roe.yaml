@@ -8,8 +8,3 @@ orders:
       volumeMounts:
         - mountPath: /homedirs
           name: homedirs
-  volumes:
-    - name: homedirs
-      nfs:
-        server: 10.72.0.23
-        path: /jhome

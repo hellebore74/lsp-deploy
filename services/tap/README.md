@@ -1,18 +1,15 @@
 # cadc-tap
 
-IVOA TAP service
+VO TAP service for the Rubin Science Platform
 
-## Source Code
-
-* <https://github.com/lsst-sqre/lsst-tap-service>
-* <https://github.com/opencadc/tap>
+**Homepage:** <https://github.com/lsst-sqre/lsst-tap-service>
 
 ## Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | Affinity rules for the Gafaelfawr frontend pod |
-| config.datalinkPayloadUrl | string | `"https://github.com/lsst/sdm_schemas/releases/download/1.2.2/datalink-snippets.zip"` | Datalink payload URL |
+| config.datalinkPayloadUrl | string | `"https://github.com/lsst/sdm_schemas/releases/download/1.1.4/datalink-snippets.zip"` | Datalink payload URL |
 | config.gafaelfawrHost | string | Value of `ingress.host` | Gafaelfawr hostname to get user information from a token |
 | config.gcsBucket | string | None, must be set | Name of GCS bucket in which to store results |
 | config.gcsBucketType | string | GCS | GCS bucket type (GCS or S3) |

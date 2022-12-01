@@ -22,7 +22,10 @@ nameOverride: ""
 fullnameOverride: ""
 
 ingress:
-  # -- Additional annotations for the ingresses
+  # -- Gafaelfawr auth query string
+  gafaelfawrAuthQuery: "scope=read:image"
+
+  # -- Additional annotations for the ingress rule
   annotations: {}
 
 autoscaling:

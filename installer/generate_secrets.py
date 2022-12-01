@@ -223,7 +223,7 @@ class SecretGenerator:
             )
 
         self.input_field("gafaelfawr", "ldap", "Use LDAP? (y/n):")
-        use_ldap = self.secrets["gafaelfawr"]["ldap"]
+        use_ldap = self.secrets["gaelfawr"]["ldap"]
         if use_ldap == "y":
             self.input_field("gafaelfawr", "ldap-password", "LDAP password")
 
@@ -255,7 +255,7 @@ class SecretGenerator:
         else:
             raise Exception(f"Invalid auth provider {auth_type}")
 
-        slack_webhook = self._get_current("rsp-alerts", "slack-webhook")
+        slack_webhook = self.secrets["rsp-alerts"]["slack-webhook"]
         if slack_webhook:
             self._set("gafaelfawr", "slack-webhook", slack_webhook)
 
@@ -369,16 +369,6 @@ class SecretGenerator:
         self.input_field(
             "rsp-alerts", "slack-webhook", "Slack webhook for alerts"
         )
-
-    def _narrativelog(self):
-        """Give narrativelog its own secret for externalization."""
-        db_pass = self.secrets["postgres"]["narrativelog_password"]
-        self._set("narrativelog", "database-password", db_pass)
-
-    def _exposurelog(self):
-        """Give exposurelog its own secret for externalization."""
-        db_pass = self.secrets["postgres"]["exposurelog_password"]
-        self._set("exposureloglog", "database-password", db_pass)
 
 
 class OnePasswordSecretGenerator(SecretGenerator):

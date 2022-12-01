@@ -29,8 +29,6 @@ influxdb:
 
 kafka-connect-manager:
   influxdbSink:
-    # Based on the kafka producers configuration for the Summit
-    # https://github.com/lsst-ts/argocd-csc/blob/main/apps/kafka-producers/values-summit.yaml
     connectors:
       auxtel:
         enabled: true
@@ -92,7 +90,7 @@ chronograf:
     GENERIC_TOKEN_URL: https://summit-lsp.lsst.codes/auth/openid/token
     USE_ID_TOKEN: 1
     JWKS_URL: https://summit-lsp.lsst.codes/.well-known/jwks.json
-    GENERIC_API_URL: https://summit-lsp.lsst.codes/auth/openid/userinfo
+    GENERIC_API_URL: https://summit-lsp.lsst.codes/auth/userinfo
     GENERIC_SCOPES: openid
     GENERIC_API_KEY: sub
     PUBLIC_URL: https://summit-lsp.lsst.codes

@@ -38,8 +38,6 @@ semaphore:
   enabled: false
 sherlock:
   enabled: false
-sqlproxy_cross_project:
-  enabled: false
 squareone:
   enabled: false
 squash_api:

@@ -19,13 +19,6 @@ strimzi-kafka:
     source:
       bootstrapServer: sasquatch-dev-kafka-bootstrap.lsst.cloud:9094
       topicsPattern: "registry-schemas, lsst.sal.*"
-    resources:
-      requests:
-        cpu: 2
-        memory: 4Gi
-      limits:
-        cpu: 4
-        memory: 8Gi
 
 influxdb:
   ingress:
@@ -34,10 +27,9 @@ influxdb:
 
 kafka-connect-manager:
   influxdbSink:
-    connectors:
-      test:
-        enabled: true
-        topicsRegex: ".*Test"
+    influxdb-sink:
+      enabled: true
+      tasksMax: 10
 
 kafdrop:
   ingress:
@@ -55,7 +47,7 @@ chronograf:
     GENERIC_TOKEN_URL: https://data-int.lsst.cloud/auth/openid/token
     USE_ID_TOKEN: 1
     JWKS_URL: https://data-int.lsst.cloud/.well-known/jwks.json
-    GENERIC_API_URL: https://data-int.lsst.cloud/auth/openid/userinfo
+    GENERIC_API_URL: https://data-int.lsst.cloud/auth/userinfo
     GENERIC_SCOPES: openid
     GENERIC_API_KEY: sub
     PUBLIC_URL: https://data-int.lsst.cloud/

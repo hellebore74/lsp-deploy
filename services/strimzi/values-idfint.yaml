@@ -1,10 +1,9 @@
 strimzi-kafka-operator:
   resources:
     limits:
-      memory: "1Gi"
+      memory: "512Mi"
     requests:
       memory: "512Mi"
   watchNamespaces:
     - "sasquatch"
-    - "alert-stream-broker"
   logLevel: "DEBUG"

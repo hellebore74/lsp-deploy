@@ -9,7 +9,7 @@ cachemachine:
 cert_manager:
   enabled: true
 datalinker:
-  enabled: true
+  enabled: false
 exposurelog:
   enabled: false
 gafaelfawr:

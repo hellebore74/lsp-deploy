@@ -1,6 +1,6 @@
 # hips
 
-HiPS tile server backed by Google Cloud Storage
+HiPS web server backed by Google Cloud Storage
 
 ## Source Code
 

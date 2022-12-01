@@ -46,8 +46,6 @@ squareone:
   enabled: true
 squash_api:
   enabled: false
-sqlproxy_cross_project:
-  enabled: true
 strimzi:
   enabled: true
 strimzi_registry_operator:

@@ -1,12 +1,12 @@
 # cert-manager
 
-TLS certificate manager
+Let's Encrypt certificate management
 
-**Homepage:** <https://cert-manager.io/>
+## Requirements
 
-## Source Code
-
-* <https://github.com/cert-manager/cert-manager>
+| Repository | Name | Version |
+|------------|------|---------|
+| https://charts.jetstack.io | cert-manager | v1.9.1 |
 
 ## Values
 

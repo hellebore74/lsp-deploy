@@ -1,10 +1,8 @@
 # mobu
 
-Continuous integration testing
+Generate system load by pretending to be a random scientist
 
-## Source Code
-
-* <https://github.com/lsst-sqre/mobu>
+**Homepage:** <https://github.com/lsst-sqre/mobu>
 
 ## Values
 

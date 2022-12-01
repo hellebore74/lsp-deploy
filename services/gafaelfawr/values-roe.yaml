@@ -11,41 +11,23 @@ config:
   # Allow access by GitHub team.
   groupMapping:
     "exec:admin":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "exec:notebook":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "read:workspace":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "read:workspace/user":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "write:workspace/user":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "exec:portal":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "exec:user":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
-    "read:image":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
     "read:tap":
-      - github:
-          organization: "lsp-uk"
-          team: "dev"
+      - "lsp-uk-dev"
+    "read:image":
+      - "lsp-uk-dev"
 
   initialAdmins:
     - "stvoutsin"

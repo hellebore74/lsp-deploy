@@ -1,16 +1,11 @@
 # alert-stream-broker
 
-Alert transmission to community brokers
+## Requirements
 
-## Source Code
+| Repository | Name | Version |
+|------------|------|---------|
+| https://lsst-sqre.github.io/charts/ | alert-database | 2.1.0 |
+| https://lsst-sqre.github.io/charts/ | alert-stream-broker | 2.5.1 |
+| https://lsst-sqre.github.io/charts/ | alert-stream-schema-registry | 2.1.0 |
+| https://lsst-sqre.github.io/charts/ | alert-stream-simulator | 1.6.2 |
 
-* <https://github.com/lsst-dm/alert_database_ingester>
-* <https://github.com/lsst-dm/alert-stream-simulator>
-
-## Values
-
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| strimzi-registry-operator.clusterName | string | `"alert-broker"` |  |
-| strimzi-registry-operator.operatorNamespace | string | `"alert-stream-broker"` |  |
-| strimzi-registry-operator.watchNamespace | string | `"alert-stream-broker"` |  |

@@ -1,10 +1,6 @@
 # cachemachine
 
-JupyterLab image prepuller
-
-## Source Code
-
-* <https://github.com/lsst-sqre/cachemachine>
+Service to prepull Docker images for the Science Platform
 
 ## Values
 

@@ -2,9 +2,7 @@
 
 A collection of utility pages for monitoring data processing.
 
-## Source Code
-
-* <https://github.com/lsst-dm/production_tools>
+**Homepage:** <https://github.com/lsst-sqre/production-tools>
 
 ## Values
 

@@ -1,10 +1,6 @@
 # sherlock
 
-Application ingress status and metrics
-
-## Source Code
-
-* <https://github.com/lsst-sqre/sherlock>
+A Helm chart for Kubernetes
 
 ## Values
 
