@@ -1,9 +1,9 @@
 
-imagePullSecrets:
-  - name: "pull-secret"
-ingress:
-  host: rsp.lapp.in2p3.fr
-vaultSecretsPath: "secret/k8s_operator/rsp-lapp/gafaelfawr"
+#imagePullSecrets:
+#  - name: "pull-secret"
+#ingress:
+#  host: rsp.lapp.in2p3.fr
+#vaultSecretsPath: "secret/k8s_operator/rsp-lapp/gafaelfawr"
 
 # Reset token storage on every Redis restart.
 redis:
